@@ -1,0 +1,58 @@
+/*const url = "https://api.open-meteo.com/v1/forecast?latitude=46&longitude=2&hourly=temperature_2m&timezone=Europe%2FLondon";
+
+let isLoading = true;
+
+async function myWeather(){
+    const response = await fetch(url);
+
+    try{
+        if(!response){
+            throw new Error('error: ' + response.status)
+        }
+        const data = await response.json();
+        console.log('Timezone: ', data.timezone)
+    }
+    catch(error){
+        console.error(error);
+    }
+    finally{
+        console.log("Marinimaster was here.");
+    }
+};*/
+
+const form = document.getElementById("poke-form");
+
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();//stop reload
+    const formData = new FormData(form);
+
+    for(item of formData){
+        console.log(item[0], item[1])
+    }
+});
+
+
+async function callPokemon() {
+    const url = `https://pokeapi.co/api/v2/pokemon/arcanine`;
+    const response = await fetch(url);
+
+    try {
+        if (!response.ok) {
+            throw new Error("error: " + response.status)
+        }
+        else {
+            const data = await response.json();
+            console.log(data.abilities[2].ability.name);
+        }
+    }
+    catch (error) {
+        console.error(error)
+    }
+    finally {
+        console.log("PokeMarini v0.1")
+    }
+
+};
+
+callPokemon();
