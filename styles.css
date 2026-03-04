@@ -46,10 +46,41 @@ header {
     background-color: #111;   /* Slight contrast from body */
 }
 
+.left-main h2 {
+    margin-bottom: 2rem;
+    color: #f5d742;
+    letter-spacing: 1px;
+}
+
+.left-main h3 {
+    margin-bottom: 1rem;
+    color: #f5d742;
+}
+
+.left-main p,
+.left-main li {
+    line-height: 1.7;
+    color: #ddd;
+}
+
 footer {
     border-top: 2px solid yellow;
     padding: 1rem;
     text-align: center;
+}
+
+/* Index page layout refinement */
+.page-index h2 {
+    margin-top: 2rem;
+}
+
+.page-index ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.page-index li {
+    margin-bottom: 0.5rem;
 }
 
 /* Layout container */
@@ -168,4 +199,94 @@ footer {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* Top 5 Layout */
+.top-entry {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Ranking number */
+.top-rank {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f5d742;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+/* Internal layout */
+.top-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Text section */
+.top-text {
+    flex: 2;
+}
+
+.top-text h3 {
+    margin-bottom: 1rem;
+    color: #f5d742;
+}
+
+.top-text p {
+    line-height: 1.7;
+    color: #ddd;
+}
+
+/* Image section */
+.top-image {
+    flex: 1;
+}
+
+.top-image img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Hover effect */
+.top-entry:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 30px rgba(255, 39, 39, 0.89);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .top-content {
+        flex-direction: column;
+    }
+}
+
+.qa-questions {
+    display: grid;
+    gap: 2rem;
+}
+
+.question-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.8rem;
+}
+
+.question-card h3 {
+    margin-bottom: 1rem;
+    color: #f5d742;
+}
+
+.question-card p {
+    color: #ddd;
+    line-height: 1.7;
 }
