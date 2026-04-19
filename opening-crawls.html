@@ -29,13 +29,22 @@
     
     <!-- LEFT COLUMN CONTENT -->
     <section class="left-main page-new">
-        <h2>Page Heading</h2>
+        <h2>Opening Crawls</h2>
+
+        <nav class="crawl-nav">
+            <button class="crawl-button btn" onclick="getCrawl(4)">The Phantom Menace</button>
+            <button class="crawl-button btn" onclick="getCrawl(5)">Attack of the Clones</button>
+            <button class="crawl-button btn" onclick="getCrawl(6)">Revenge of the Sith</button>
+            <button class="crawl-button btn" onclick="getCrawl(1)">A New Hope</button>
+            <button class="crawl-button btn" onclick="getCrawl(2)">The Empire Strikes Back</button>
+            <button class="crawl-button btn" onclick="getCrawl(3)">Return of the Jedi</button>
+        </nav>
 
         <div class="grid-layout">
-            <!-- Use .card with modifiers like .card-padded and .hover-lift -->
-            <div class="card card-padded hover-lift">
-                <h3>Section Title</h3>
-                <p>Content goes here...</p>
+
+            <div class="card card-padded hover-lift crawl-container">
+                <h3 id="movie-name"> --- </h3>
+                <pre id="crawl-text">Crawling...</pre>
             </div>
         </div>
 
@@ -49,8 +58,11 @@
         <p>Email: jvilleda385363@nsula.edu</p>
         <p>Last Updated: <span id="update-date"></span></p>
     </div>
+    <div id="crawl-page"></div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js">
+
+</script>
 </body>
 </html>
